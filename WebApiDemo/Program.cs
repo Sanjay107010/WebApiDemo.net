@@ -21,6 +21,10 @@ builder.Services.AddDbContext<ContactApiDbContext>(Options =>
 {
     Options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionStrings"));
 });
+builder.Services.AddDbContext<RegistrationApiDbContext>(Options =>
+{
+    Options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionStrings"));
+});
 
 var app = builder.Build();
 
